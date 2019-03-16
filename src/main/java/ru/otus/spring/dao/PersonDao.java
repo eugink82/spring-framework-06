@@ -13,6 +13,4 @@ public interface PersonDao {
     Person getById(int id);
 
     List<Person> getAll();
-
-    void deleteById(int id);
 }
