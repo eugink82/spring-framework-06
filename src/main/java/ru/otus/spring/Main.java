@@ -16,8 +16,6 @@ public class Main {
 
         PersonDao dao = context.getBean(PersonDao.class);
 
-        System.out.println("All count " + dao.count());
-
         Console.main(args);
     }
 }
