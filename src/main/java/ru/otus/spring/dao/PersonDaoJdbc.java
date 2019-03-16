@@ -31,24 +31,4 @@ public class PersonDaoJdbc implements PersonDao {
     public void insert(Person person) {
         jdbc.update("insert into persons (id, `name`) values (?, ?)", person.getId(), person.getName());
     }
-
-    @Override
-    public Person getById(int id) {
-        return jdbc.queryForObject("select * from persons where id = ?", new Object[] {id}, new PersonMapper());
-    }
-
-    @Override
-    public List<Person> getAll() {
-        return jdbc.query("select * from persons", new PersonMapper());
-    }
-
-    private static class PersonMapper implements RowMapper<Person> {
-
-        @Override
-        public Person mapRow(ResultSet resultSet, int i) throws SQLException {
-            int id = resultSet.getInt("id");
-            String name = resultSet.getString("name");
-            return new Person(id, name);
-        }
-    }
 }

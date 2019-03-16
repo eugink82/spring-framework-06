@@ -22,10 +22,6 @@ public class Main {
 
         System.out.println("All count " + dao.count());
 
-        Person ivan = dao.getById(2);
-
-        System.out.println("Ivan id: " + ivan.getId() + " name: " + ivan.getName());
-
         Console.main(args);
     }
 }

@@ -9,8 +9,4 @@ public interface PersonDao {
     int count();
 
     void insert(Person person);
-
-    Person getById(int id);
-
-    List<Person> getAll();
 }
