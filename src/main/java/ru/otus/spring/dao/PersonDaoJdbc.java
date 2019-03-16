@@ -26,9 +26,4 @@ public class PersonDaoJdbc implements PersonDao {
     public int count() {
         return jdbc.queryForObject("select count(*) from persons", Integer.class);
     }
-
-    @Override
-    public void insert(Person person) {
-        jdbc.update("insert into persons (id, `name`) values (?, ?)", person.getId(), person.getName());
-    }
 }

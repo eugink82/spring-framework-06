@@ -18,10 +18,6 @@ public class Main {
 
         System.out.println("All count " + dao.count());
 
-        dao.insert(new Person(2, "ivan"));
-
-        System.out.println("All count " + dao.count());
-
         Console.main(args);
     }
 }
