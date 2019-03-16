@@ -16,9 +16,4 @@ import java.util.Map;
 @Repository
 public class PersonDaoJdbc implements PersonDao {
 
-    private final JdbcOperations jdbc;
-
-    public PersonDaoJdbc(JdbcOperations jdbcOperations) {
-        jdbc = jdbcOperations;
-    }
 }
