@@ -15,5 +15,14 @@ import java.util.Map;
 @SuppressWarnings({"SqlNoDataSourceInspection", "ConstantConditions", "SqlDialectInspection"})
 @Repository
 public class PersonDaoJdbc implements PersonDao {
+    private final JdbcOperations jdbc;
 
+    public PersonDaoJdbc(JdbcOperations jdbc) {
+        this.jdbc = jdbc;
+    }
+
+    @Override
+    public int count() {
+        return jdbc.queryForObject("SELECT count(*) FROM PERSONS",Integer.class);
+    }
 }

@@ -15,7 +15,7 @@ public class Main {
         ApplicationContext context = SpringApplication.run(Main.class);
 
         PersonDao dao = context.getBean(PersonDao.class);
-
+        System.out.println(dao.count());
         Console.main(args);
     }
 }
